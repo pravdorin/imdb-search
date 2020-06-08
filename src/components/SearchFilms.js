@@ -1,17 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchFilms, fetchFilm } from '../action';
+import { searchFilms } from '../action';
 
 import './SearchFilms.css';
 
 class SearchFilms extends React.Component {
 
-    state = {input: ''}
+    state = {input: ''};
 
     submitSearch = (e) => {
         e.preventDefault();
         this.props.searchFilms(this.state.input)
-        fetchFilm(this.props.films.id)
     }
 
     render() {

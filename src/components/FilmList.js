@@ -1,18 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchFilm } from '../action';
 import './FilmList.css'
 
 class FilmList extends React.Component {
 
     renderList() {
-		return (
-            <div>
-                <h1>{this.props.movie.title}</h1>
-                <h1>{this.props.movie.rating}</h1>
-            </div>
-        )
-	}
+        const movies = this.props.films.map(film => {
+            return (
+                <div className="item film-item" key={film.id}>
+                    <div className="image">
+                        <img className="film-image" src={film.image} alt={film.title}/>
+                    </div>
+                    <div className="content">
+                        <a className="header film-header">{film.title}</a>
+                    </div>
+                </div>
+            )
+        })
 
+        return movies;
+    }
 
     render () {
         return (
@@ -25,4 +33,4 @@ const mapStateToProps = (state) => {
     console.log(state)
     return { films: state.films, movie: state.movie};
 }
-export default connect(mapStateToProps)(FilmList);
+export default connect(mapStateToProps, {fetchFilm })(FilmList);
