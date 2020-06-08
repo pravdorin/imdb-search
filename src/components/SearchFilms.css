@@ -1,0 +1,11 @@
+.search-film {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.search-bar {
+    height: 50px;
+    width: 340px;
+
+    font-size: 30px;
+}

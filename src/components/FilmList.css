@@ -1,0 +1,33 @@
+.film-list {
+    background: rgba(255, 255, 255, 0.938);
+
+    height: 100vh;
+
+    width: 80%;
+
+    margin: 30px auto;
+}
+
+.film-item {
+
+    display: flex;
+    color: #000000;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+}
+
+.film-image {
+    max-width: 100px;
+    min-width: 100px;
+
+    max-height: 100px;
+    min-height: 100px;
+
+    object-fit: contain;
+}
+
+.film-header {
+    font-size: 28px;
+}
