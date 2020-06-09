@@ -18,6 +18,12 @@
     padding-top: 20px;
 }
 
+.film-flex {
+    display: flex;
+    width: 250px;
+    margin-top: 5px;
+}
+
 .film-image {
     max-width: 100px;
     min-width: 100px;
@@ -29,5 +35,13 @@
 }
 
 .film-header {
-    font-size: 28px;
+    font-size: 16px;
+}
+
+.film-rating {
+    padding-top: 20px;
+}
+
+.film-length {
+    padding-top: 20px;
 }

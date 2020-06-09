@@ -1,25 +1,37 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchFilm } from '../action';
 import './FilmList.css'
 
 class FilmList extends React.Component {
 
     renderList() {
-        const movies = this.props.films.map(film => {
-            return (
-                <div className="item film-item" key={film.id}>
-                    <div className="image">
-                        <img className="film-image" src={film.image} alt={film.title}/>
+        const renders = this.props.movies.map(movie => {
+                if(movie.title === '') {
+                    return null;
+                } else {
+                return (
+                    <div className="item film-item" key={movie.id}>
+                        <div className="image">
+                            <img className="film-image" src={movie.poster} alt={movie.title} />
+                        </div>
+                        <div className="content">
+                            <div className="film-flex">
+                                <a className="header film-header">{movie.title}</a>
+                                <span className="description">{movie.year}</span>
+                            </div>
+                            <div className="meta film-rating">
+                            <span>Rating: {movie.rating}/10</span>
+                            </div>
+                            <div className="extra film-length">
+                            {movie.length}
+                            </div>
+                        </div>
                     </div>
-                    <div className="content">
-                        <a className="header film-header">{film.title}</a>
-                    </div>
-                </div>
-            )
+                )
+                }
         })
 
-        return movies;
+        return renders;
     }
 
     render () {
@@ -30,7 +42,6 @@ class FilmList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
-    return { films: state.films, movie: state.movie};
+    return { films: state.films, movies: state.movies};
 }
-export default connect(mapStateToProps, {fetchFilm })(FilmList);
+export default connect(mapStateToProps)(FilmList);

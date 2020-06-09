@@ -4,5 +4,5 @@ import fetchFilm from './fetchReducer';
 
 export default combineReducers({ 
     films: searchReducer,
-    movie: fetchFilm,
+    movies: fetchFilm,
 });

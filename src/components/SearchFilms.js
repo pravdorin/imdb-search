@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchFilms } from '../action';
+import { searchFilms, getFilms } from '../action';
 
 import './SearchFilms.css';
 
@@ -10,7 +10,7 @@ class SearchFilms extends React.Component {
 
     submitSearch = (e) => {
         e.preventDefault();
-        this.props.searchFilms(this.state.input)
+        this.props.getFilms(this.state.input)
     }
 
     render() {
@@ -29,4 +29,4 @@ const mapStateToProps = (state) => {
     return { films: state.films };
 }
 
-export default connect(mapStateToProps, { searchFilms })(SearchFilms);
+export default connect(mapStateToProps, { searchFilms, getFilms })(SearchFilms);
