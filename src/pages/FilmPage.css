@@ -1,0 +1,120 @@
+.link-back {
+    display: block;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    margin: 40px auto;
+
+    font-size: 24px;
+
+    text-decoration: none;
+}
+
+.link-back:hover {
+    color: rgb(112, 173, 223)
+}
+
+.film-page-item {
+    background: rgba(255, 255, 255, 0.938);
+
+    min-height: 100vh;
+
+    width: 80%;
+
+    margin: 30px auto 0 auto;
+
+    color: #000;
+}
+
+.film-item-head {
+    background: #333333;
+}
+
+.film-item-head-top {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mini-row {
+    display: flex;
+
+    align-items: center;
+}
+
+.film-item-head-top-left {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.film-item-head-title {
+    color: #ffffff;
+
+    font-size: 36px;
+}
+.film-item-head-year {
+    padding-top: 8px;
+    color: #ffffff;
+
+    font-size: 24px;
+}
+.film-item-head-rating {
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+.film-item-head-length {
+    color: #ffffff;
+
+    font-size: 20px;
+    padding-top: 8px;
+
+    padding-left: 20px;
+}
+
+.film-item-hero {
+    display: flex;
+}
+
+.film-hero-poster {
+    max-width: 30vw;
+}
+
+.hero-poster-image {
+    width: 30vw;
+
+    max-height: 610px;
+    min-height: 610px;
+
+    object-fit: cover;
+}
+
+.film-hero-trailer {
+    width: 70%;
+}
+
+.film-hero-frame {
+    width: 100%;
+
+    min-height: 610px;
+    max-height: 610px;
+
+    object-fit: cover;
+}
+
+.film-body-plot {
+    width: 800px;
+
+    font-size: 22px;
+
+    padding: 20px 40px;
+
+    margin: 0 auto;
+}
+
+.actors {
+    padding-top: 5px;
+}

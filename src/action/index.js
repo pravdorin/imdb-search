@@ -17,6 +17,11 @@ export const searchFilms = (name) => async (dispatch) => {
 
 
 export const fetchFilm = (id) => async (dispatch) => {
+    dispatch(deleteFilm())
     const response = await IMDB.get(`/film/${id}${key}`);
     dispatch({ type: 'FETCH_FILM', payload: response.data })
 };
+
+export const deleteFilm = () => (dispatch) => {
+    dispatch({ type: 'DELETE_FILMS', payload: null})
+}

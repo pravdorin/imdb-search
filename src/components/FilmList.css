@@ -1,7 +1,7 @@
 .film-list {
     background: rgba(255, 255, 255, 0.938);
 
-    height: 100vh;
+    min-height: 100vh;
 
     width: 80%;
 
@@ -16,6 +16,11 @@
     margin-top: 20px;
 
     padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.film-item:nth-child(even) {
+    background: rgba(173, 171, 171, 0.301);
 }
 
 .film-flex {
@@ -36,6 +41,14 @@
 
 .film-header {
     font-size: 16px;
+
+    color: #a08214;
+
+    text-decoration: none;
+}
+
+.film-header:hover {
+    color: #917510;
 }
 
 .film-rating {
